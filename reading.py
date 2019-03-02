@@ -18,3 +18,9 @@ for d in data:
 	if len(d) < 100:
 		new.append(d)
 print('一共有', len(new), '笔长留言')
+
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('there are total', len(good), 'good reviews!')
