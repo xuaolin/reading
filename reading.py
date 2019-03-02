@@ -17,10 +17,17 @@ new = []
 for d in data:
 	if len(d) < 100:
 		new.append(d)
-print('一共有', len(new), '笔长留言')
+print('一共有', len(new), '笔短留言')
 
 good = []
 for d in data:
 	if 'good' in d:
 		good.append(d)
 print('there are total', len(good), 'good reviews!')
+
+good = [d for d in data if 'good' in d]
+print(len(good)) #advanced way to make good list, function the same as the line 22-26
+
+bad = []
+bad = [d for d in data if 'bad' in d]
+print(len(bad)) #filter all the bad review and output the counting number
